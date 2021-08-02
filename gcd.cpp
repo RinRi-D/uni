@@ -24,6 +24,13 @@ const I MOD =       1e9+7 ;
 const I inf =       2e9+7 ;
 const L INF = 2e18+7 ;
  
+int gcd (int a, int b) {
+	if (b == 0)
+		return a;
+	else
+		return gcd (b, a % b);
+}
+
 int32_t main(int argc, char *argv[])
 {
     if(argc > 1)
@@ -33,5 +40,5 @@ int32_t main(int argc, char *argv[])
     
     int a, b ;
     cin >> a >> b ;
-    cout << __gcd(a, b) << '\n' ;
+    cout << gcd(a, b) << '\n' ;
 }
